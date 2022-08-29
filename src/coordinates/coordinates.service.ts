@@ -4,7 +4,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Coordinate } from './schemas/coordinates.schema';
 import { HttpService } from '@nestjs/axios';
 import { AxiosResponse } from 'axios';
-import { Observable } from 'rxjs/internal/Observable';
+
 import { lastValueFrom } from 'rxjs';
 
 @Injectable()
@@ -36,7 +36,6 @@ export class CoordinatesService {
 
   async createRandom(): Promise<Coordinate> {
     const randomCoords = await this.getRandomCoords();
-    console.log(randomCoords.data);
     const newCoord = new this.coordModel(randomCoords.data);
     return await newCoord.save();
   }

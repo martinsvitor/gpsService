@@ -10,7 +10,7 @@ Created using Nestjs, database with MongoDB.
 $ git clone https://github.com/martinsvitor/gpsService.git
 
 # Move into the folder
-$ cd gps-service
+$ cd gpsService
 
 # Install the dependencies
 $ npm install

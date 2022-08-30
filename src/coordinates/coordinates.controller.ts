@@ -18,7 +18,7 @@ export class CoordinatesController {
   ): Promise<Coordinates> {
     return this.coordService.createCoordinates(coordinates);
   }
-  @Post('random')
+  @Get('sample')
   createRandom(): Promise<Coordinates> {
     return this.coordService.createRandom();
   }

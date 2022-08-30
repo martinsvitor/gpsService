@@ -7,10 +7,14 @@ import { Coordinates } from './interfaces/coordinates.interface';
 export class CoordinatesController {
   constructor(private readonly coordService: CoordinatesService) {}
 
+  // Get request to return all stored coordinates
+
   @Get('all')
   findAll(): Promise<Coordinates[]> {
     return this.coordService.findAll();
   }
+
+  // Post request to receive coordinates from an external device
 
   @Post()
   createCoordinates(
@@ -18,6 +22,9 @@ export class CoordinatesController {
   ): Promise<Coordinates> {
     return this.coordService.createCoordinates(coordinates);
   }
+
+  // Get request to receive some random coordinates and store it
+
   @Get('sample')
   createRandom(): Promise<Coordinates> {
     return this.coordService.createRandom();

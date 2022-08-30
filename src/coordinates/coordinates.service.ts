@@ -4,7 +4,6 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Coordinate } from './schemas/coordinates.schema';
 import { HttpService } from '@nestjs/axios';
 import { AxiosResponse } from 'axios';
-
 import { lastValueFrom } from 'rxjs';
 
 @Injectable()
@@ -20,7 +19,6 @@ export class CoordinatesService {
   }
 
   async createCoordinates(coordinates: Coordinate): Promise<Coordinate> {
-    console.log(coordinates);
     const newCoord = new this.coordModel(coordinates);
     return await newCoord.save();
   }

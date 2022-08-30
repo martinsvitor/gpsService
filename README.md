@@ -1,6 +1,6 @@
 ## Description
 
-An API created to receive and store GPS data from external devices.
+An API created to receive and store GPS data from external devices. \
 Created using Nestjs, database with MongoDB.
 
 ## Installation

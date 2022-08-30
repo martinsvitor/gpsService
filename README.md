@@ -43,6 +43,6 @@ $ npm run test:cov
 
 The API has three working endpoints:
 
-- **/coordinates**            for **Post** requests sending json data
-- **/coordinates/all**        for **Get** requests, returning all stored coordinates
+- **/coordinates**                 for **Post** requests sending json data
+- **/coordinates/all**           for **Get** requests, returning all stored coordinates
 - **/coordinates/sample**     for **Get** requests, receiving and storing the coordinates from [wheretheiss](https://wheretheiss.at/)
